@@ -1,0 +1,15 @@
+{
+    "dependencies": {
+        "@types/http-proxy": "^1.17.7",
+        "http-proxy": "^1.18.1",
+        "eventcontainer": "^0.0.4",
+        "skyfiles": "^0.0.2",
+        "skyserver": "^0.0.15",
+        "dotenv": "^10.0.0"
+    },
+    "devDependencies": {
+        "ts-loader": "^8.0.13",
+        "tslint": "^6.1.3",
+        "typescript": "^4.1.3"
+    }
+}
