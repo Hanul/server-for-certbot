@@ -16,7 +16,9 @@ export default async function boot() {
     wssProxy.listen(9091);
     wssProxy.on("error", function (err, req, res) {
         console.log(err);
-        res.writeHead(500, { "Content-Type": "text/plain" });
+        if (res.writeHead !== undefined) {
+            res.writeHead(500, { "Content-Type": "text/plain" });
+        }
         res.end("Something went wrong. And we are reporting a custom error message.");
     });
 
@@ -30,7 +32,9 @@ export default async function boot() {
     httpsProxy.listen(9093);
     httpsProxy.on("error", function (err, req, res) {
         console.log(err);
-        res.writeHead(500, { "Content-Type": "text/plain" });
+        if (res.writeHead !== undefined) {
+            res.writeHead(500, { "Content-Type": "text/plain" });
+        }
         res.end("Something went wrong. And we are reporting a custom error message.");
     });
 
